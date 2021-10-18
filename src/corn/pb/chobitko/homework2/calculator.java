@@ -15,22 +15,23 @@ public class calculator {
         String sign;
         sign = scan.next();
         int ans;
-        switch(sign) {
+        ans = 0;
+        switch (sign) {
             case "+": ans = operand1 + operand2;
                 break;
             case "-": ans = operand1 - operand2;
                 break;
             case "*": ans = operand1 * operand2;
-                break;
-            case "/": ans = operand1/operand2;
-                if(operand2!= 0)
-                    System.out.println("Результат виконання операції:" + operand1 + " " + sign + " " + operand2 + " = " + ans);
-                else System.out.println("На нуль ділити не можна!");
-                break;
+            System.out.println("Результат виконання операції:" + operand1 + " " + sign + " " + operand2 + " = " + ans);
+           break;
+            case "/":
+                if (operand2 == 0) { System.out.println("На 0 ділити не можна!");}
+                 else { ans = operand1 / operand2;
+                System.out.println("Результат виконання операції:" + operand1 + " " + sign + " " + operand2 + " = " + ans);}
             default:
-                return;
         }
-        System.out.println("Результат виконання операції:" + operand1 + " " + sign + " " + operand2 + " = " + ans);
     }
-
 }
+
+
+
